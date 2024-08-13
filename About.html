@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Evolve Back Hotel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        #navbar {
+            --navbar-height: 64px;
+            position: fixed;
+            height: var(--navbar-height);
+            background-color: rgba(255, 255, 255, 0.8);
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 20px;
+            line-height: var(--navbar-height);
+        }
+
+        #navbar .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        #navbar .book-now {
+            background-color: #04AA6D;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #navbar .book-now:hover {
+            background-color: #038c5a;
+        }
+
+        .container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .back-to-top {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-to-top a {
+            text-decoration: none;
+            color: #04AA6D;
+            font-weight: bold;
+        }
+
+        .back-to-top a:hover {
+            color: #038c5a;
+        }
+
+        .image-gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover img {
+            opacity: 0.7;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .video-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            max-width: 800px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="home.html" class="logo">
+            <img src="logo.png" alt="Hotel Logo">
+        </a>
+        <a href="Rooms.html">Rooms</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Book.html" class="book-now">Book Now</a>
+    </nav>
+
+    <div class="container">
+        <h1>About Evolve Back Hotel</h1>
+        <p>Evolve Back Hotel is renowned for its blend of luxurious comfort and contemporary design. Our mission is to offer a one-of-a-kind experience that combines elegance with modern amenities, ensuring every guest feels valued and pampered.</p>
+
+        <p>Located in an idyllic setting, the Evolve Back Hotel provides an array of high-end facilities designed to cater to both business and leisure travelers. From its state-of-the-art conference rooms to its serene spa services, every aspect of our hotel is crafted to meet the highest standards of hospitality.</p>
+
+        <img src="black evolve_3.webp" alt="Interior of Evolve Back Hotel">
+
+        <p>At Evolve Back, we are dedicated to sustainability and innovation. Our design seamlessly integrates advanced technology with a refined aesthetic, creating an environment that is both practical and visually stunning.</p>
+
+        <p>Our professional staff is committed to delivering exceptional service, from personalized attention to diverse dining options, all aimed at providing an unforgettable stay.</p>
+
+        <h2>Evolve Back Hampi</h2>
+        <p>Nestled amidst the stunning landscape of Hampi, a UNESCO World Heritage site, Evolve Back Hampi offers a unique blend of history, luxury, and nature. The resort is designed to reflect the grandeur of the Vijayanagara Empire, with its stunning architecture and opulent interiors.</p>
+
+        <p>Guests can enjoy a range of activities, including guided tours of the historical ruins, nature walks, and cultural experiences that bring the rich history of Hampi to life. The resort also features luxurious villas, a spa offering traditional Ayurvedic treatments, and gourmet dining options that showcase the best of local and international cuisine.</p>
+
+        <img src="evolve_back_hampi.jpg" alt="Evolve Back Hampi Resort">
+
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="deluxe_room.jpg" alt="Deluxe Room">
+                <div class="overlay">Deluxe Room</div>
+            </div>
+            <div class="image-container">
+                <img src="suit_room.jpg" alt="Suite Room">
+                <div class="overlay">Suite Room</div>
+            </div>
+            <div class="image-container">
+                <img src="beh.jpg" alt="Luxury Villa">
+                <div class="overlay">Luxury Villa</div>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <h2>Experience Evolve Back Hampi</h2>
+            <iframe src="https://www.youtube.com/embed/your_video_id" allowfullscreen></iframe>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#">Back to Top</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking - Rooms</title>
+    <style>
+  
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; 
+        }
+
+        #navbar {
+            --navbar-height: 64px;
+            position: fixed;
+            height: var(--navbar-height);
+            background-color: rgba(255, 255, 255, 0.8); 
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            padding: 0 20px; 
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: #333; 
+            margin: 0 20px;
+            line-height: var(--navbar-height);
+        }
+
+        #navbar .logo img {
+            height: 40px; 
+            width: auto;
+        }
+
+        #navbar .book-now {
+            background-color: #04AA6D; 
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #navbar .book-now:hover {
+            background-color: #038c5a; 
+        }
+
+        .container {
+            margin-top: 64px; 
+            padding: 20px;
+        }
+
+        #rooms {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        #rooms h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .room {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 15px;
+        }
+
+        .room img {
+            width: 100%;
+            height: auto;
+            max-width: 300px; 
+        }
+
+        .room h3 {
+            margin: 15px 0;
+        }
+
+        .room p {
+            margin: 0 0 15px;
+        }
+
+        .room button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #04AA6D;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .room button:hover {
+            background-color: #038c5a;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .room {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .room img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="home.html" class="logo">
+            <img src="logo.png" alt="Hotel Logo"> 
+        </a>
+        <a href="Rooms.html">Rooms</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Book.html" class="book-now">Book Now</a>
+    </nav>
+
+    <div class="container">
+        <section id="rooms">
+            <h2>Our Rooms</h2>
+            <div class="room">
+                <img src="deluxe_room.jpg" alt="Deluxe Room"> 
+                <div>
+                    <h3>Deluxe Room</h3>
+                    <p>Our Deluxe Rooms offer a perfect blend of comfort and elegance. Enjoy luxury amenities, stunning views, and ample space.</p>
+                    <p><strong>Price: $200 per night</strong></p>
+                    <button>Check Availability</button>
+                </div>
+            </div>
+            <div class="room">
+                <img src="suit_room.jpg" alt="Suite Room"> 
+                <div>
+                    <h3>Suite Room</h3>
+                    <p>The Suite Room provides an expansive living space with premium amenities. Ideal for both relaxation and business stays.</p>
+                    <p><strong>Price: $350 per night</strong></p>
+                    <button>Check Availability</button>
+                </div>
+            </div>
+        
+        </section>
+    </div>
+</body>
+</html>

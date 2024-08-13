@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        #navbar {
+            --navbar-height: 64px;
+            position: fixed;
+            height: var(--navbar-height);
+            background-color: rgba(255, 255, 255, 0.8);
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 20px;
+            line-height: var(--navbar-height);
+        }
+
+        #navbar .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        #navbar .book-now {
+            background-color: #04AA6D;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #navbar .book-now:hover {
+            background-color: #038c5a;
+        }
+
+        .container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .booking-section {
+            margin-bottom: 40px;
+        }
+
+        .booking-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .booking-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .booking-section input,
+        .booking-section select,
+        .booking-section textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .booking-section button {
+            background-color: #04AA6D;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .booking-section button:hover {
+            background-color: #038c5a;
+        }
+
+        .booking-summary {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .terms-conditions {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="home.html" class="logo">
+            <img src="logo.png" alt="Hotel Logo">
+        </a>
+        <a href="Rooms.html">Rooms</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Book.html" class="book-now">Book Now</a>
+    </nav>
+
+    <div class="container">
+        <section class="booking-section">
+            <h2>Book a Room</h2>
+            <form action="submit_booking_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <input type="date" name="checkin" placeholder="Check-in Date" required>
+                <input type="date" name="checkout" placeholder="Check-out Date" required>
+                <select name="guests" required>
+                    <option value="" disabled selected>Number of Guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                </select>
+                <select name="room_type" required>
+                    <option value="" disabled selected>Room Type</option>
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <textarea name="requests" rows="5" placeholder="Special Requests"></textarea>
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    
+                    <p>Check-in Date: <span id="summary-checkin"></span></p>
+                    <p>Check-out Date: <span id="summary-checkout"></span></p>
+                    <p>Guests: <span id="summary-guests"></span></p>
+                    <p>Room Type: <span id="summary-room-type"></span></p>
+                    <p>Total Price: <span id="summary-price"></span></p>
+                </div>
+                <input type="text" name="card_number" placeholder="Credit Card Number" required>
+                <input type="text" name="expiry_date" placeholder="Expiry Date (MM/YY)" required>
+                <input type="text" name="cvv" placeholder="CVV" required>
+                <input type="text" name="billing_address" placeholder="Billing Address" required>
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="postal_code" placeholder="Postal Code" required>
+                <input type="text" name="country" placeholder="Country" required>
+                <div class="terms-conditions">
+                    <input type="checkbox" name="agree" required> I agree to the <a href="terms.html">terms and conditions</a>.
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Evolve Back Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+        <p>Follow us on:
+            <a href="#">Facebook</a>,
+            <a href="#">Twitter</a>,
+            <a href="#">Instagram</a>
+        </p>
+    </div>
+</body>
+</html>

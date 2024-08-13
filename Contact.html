@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking - Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; 
+        }
+
+        #navbar {
+            --navbar-height: 64px;
+            position: fixed;
+            height: var(--navbar-height);
+            background-color: rgba(255, 255, 255, 0.8); 
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px); 
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            padding: 0 20px; 
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: #333; 
+            margin: 0 20px;
+            line-height: var(--navbar-height);
+        }
+
+        #navbar .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        #navbar .book-now {
+            background-color: #04AA6D;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #navbar .book-now:hover {
+            background-color: #038c5a;
+        }
+
+        .map-container {
+            margin: 20px auto;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .map-container h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #contact {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        #contact p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background-color: #04AA6D;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: #038c5a;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="home.html" class="logo">
+            <img src="logo.png" alt="Hotel Logo"> 
+        </a>
+        <a href="Rooms.html">Rooms</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Book.html" class="book-now">Book Now</a>
+    </nav>
+
+    <div class="map-container">
+        <h2>Find Us Here</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.372509290377!2d76.47863501376027!3d15.332384994386733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf1c0f1eb6a91d%3A0xa1c1b048b53dc0!2sEvolve%20Back%20Hampi!5e0!3m2!1sen!2sin!4v1620752178793!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Evolve Back Resort Hampi, Suite 456, Hampi, India</p>
+        <p><strong>Phone:</strong> +91 (234) 567-8900</p>
+        <p><strong>Email:</strong> contact@Evolve Back Resort Hampi.com</p>
+        
+        <h3>Send Us a Message</h3>
+        <form action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

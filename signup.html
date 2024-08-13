@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Evolve Back Resort Hampi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #038c5a;
+        }
+
+        .form-container p {
+            text-align: center;
+        }
+
+        .form-container p a {
+            color: #04AA6D;
+            text-decoration: none;
+        }
+
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Sign Up</h1>
+        <form action="signup_process.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+</body>
+</html>
